@@ -1,0 +1,367 @@
+html{
+	scroll-behavior: smooth;
+}
+body{
+	margin:0;
+	padding:0;
+	background:#fff;
+	font-family: 'Poppins', sans-serif;
+}
+.a{
+	text-align:right;
+	width: 45%;
+	font-size: larger;
+font-weight: bold;
+}
+.b{
+	font-size: larger;
+}
+.banner{
+	position: relative;
+	height:100vh;
+	width:100%;
+	background:linear-gradient(rgba(10, 10, 10, 0.7),rgba(15, 14, 14, 0.7)),url(1.png);
+	background-position:50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fff;
+	overflow: hidden;
+}
+.banner:after{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 270px 0 0 500px;
+	border-color: transparent transparent transparent #fff;
+	content: '';
+	position: absolute;
+	bottom:-5%;
+}
+.banner:before{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 270px 1500px;
+	border-color: transparent transparent #fff transparent;
+	content: '';
+	position: absolute;
+	right:0;
+	bottom:-5%;
+}
+.banner .info-head{
+	position: absolute;
+	height:auto;
+	width:100%;
+	top:15%;
+	transform: translateY(-15%);
+}
+.banner .info-head .heading{
+	font-size: 75px;
+	margin-left:25%;
+	margin-top:10%;
+	transform: translate(-25%,-10%);
+	height:auto;
+	width:auto;
+	font-weight: 600; 
+}
+.banner .info-head .name:before{
+	content: attr(data-text1); 
+	position: relative;
+	animation-name: ram ;
+	animation-duration: 10s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	transition: 0.5s ease-in-out;
+	width:100%;
+}
+.banner .info-head ul{
+	position: relative;
+	height:10%;
+	width:50%;
+	margin-top:-5%;
+	left:10%;
+	transform: translateX(-10%);
+}
+.banner .info-head {
+	list-style-type: none;
+	display: inline-block;
+	padding:15px;
+}
+.banner .info-head i{
+	cursor: pointer;
+	text-align: center;
+	text-shadow: 0px -5px 15px rgba(0, 0, 0, 0.95);
+	transition: 0.5s ease-in-out;
+}
+.banner .info-head i:hover{
+	color:#bbb;
+}
+.banner .arrow{
+	position: absolute;
+	height:5%;
+	width:2%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	padding:20px 10px;
+	left:10%;
+	top:55%;
+	transform: translate(-10%,-55%);
+	text-decoration: none;
+	color:#fff;
+}
+.banner .arrow i{
+	font-size: 35px;
+	font-weight: 600;
+	animation:animate3 1.5s linear infinite;
+	text-shadow: 20px 5px 15px rgba(0, 0, 0, 0.95);
+}
+
+@keyframes animate3{
+	0%{
+		transform: translateY(-10px);
+	}
+	20%{
+		transform: translateY(3px);
+	}
+	40%{
+		transform: translateY(-5px);
+	}
+	60%{
+		transform: translateY(6px);
+	}
+	80%{
+		transform: translateY(3px);
+	}
+	100%{
+		transform: translateY(-10px);
+	}
+}
+@keyframes ram{
+	0%{
+		content: attr(data-text1);
+	}
+	50%{
+		content: attr(data-text3);
+	}
+	100%{
+		content: attr(data-text2);
+	}
+}
+.head{
+	position: relative;
+	height:100%;
+	width:100%;
+}
+.head .head1{
+	height:auto;
+	width:85%;
+	background:rgba(0, 255, 256, 0.5);
+	font-family:'lato', sans-serif;
+	font-size:35px;
+	font-weight:900;
+	margin:5% auto 0 auto;
+	text-align: center;
+	color:#012ff5;
+	padding:10px;
+}
+.head .head1-info{
+	height:auto;
+	width:90%;
+	font-family:'cinzel', sans-serif;
+	font-size:22px;
+	font-weight:300;
+	margin:5% auto;
+	text-align: center;
+	color:#000;
+}
+
+.progress-bar{
+	position: absolute;
+	height:auto;
+	width:100%;
+	text-align: center;
+}
+.progress-bar .bar{
+	height:auto;
+	width:100%;
+}
+.progress-bar .bars{
+	height:12px;
+	width:40%;
+	background:#fff;
+	margin-left:50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+.progress-bar .bars .progress{
+	width:80%;
+	background:#000;
+	position: relative;
+	z-index: -1;
+	animation:animate 7s linear 1;
+	transition: 0.5s ease;
+}
+.progress-bar .bars p{
+	position: absolute;
+	top:-150%;
+	right:2%;
+	color:#000;
+	z-index: 1;
+}
+.progress-bar .bars .progress.progress1{
+	width:95%;
+}
+.progress-bar .bars .progress.progress2{
+	width:75%;
+}
+.progress-bar .bars .progress.progress3{
+	width:45%;
+}
+.progress-bar .bars .progress.progress4{
+	width:75%;
+}
+@keyframes animate{
+	from{
+		width:0%;
+	}
+}
+.banner-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.banner-text h4{
+	font-size: 65px;
+	font-family: merienda;
+	margin: 0;
+}
+h2{
+	font-family: bignoodletitling;
+	margin: 0;
+}
+h2:before{
+content: 'Welcome everybody';
+	font-size: 100%;
+	animation: animate1 8s infinite;
+}
+@keyframes animate1{
+	0%{
+		font-size: 100%;
+		opacity: 1;
+	}
+	25%{
+		font-size: 80%;
+		opacity: 0;
+	}
+	50%{
+		font-size: 100%;
+		opacity: 1;
+	}
+	65%{
+		font-size: 80%;
+		opacity: 0;
+	}
+	80%{
+		font-size: 100%;
+		opacity: 1;
+		content: 'Welcome everybody';
+	}
+	90%{
+		font-size: 80%;
+		opacity: 0;
+	}
+	100%{
+		font-size: 100%;
+		opacity: 1;
+		content: 'Welcome everybody';
+	}
+}
+#firefly{
+	height: 100vh;
+	width: 100%;
+	line-height: 200px;
+	margin-top: -55px;
+}
+
+
+ul li{
+  display:inline-block;
+  line-height:60px;
+  width:60px;
+  height:60px;
+  background-color:#f1ebeb;
+  text-align:center;
+  border:1px solid #080808;
+  border-radius:50%;
+  margin:5px;
+  transition:0.5s;
+}
+ul li a{
+  font-size:28px;
+  color:#070604;
+  transition:0.5s;
+}
+ul li:hover{
+  border-color:rgb(5, 5, 5);
+  box-shadow:0px 0px 20px rgb(48, 46, 46),
+    0px 0px 50px rgb(32, 27, 27);
+}
+ul li:hover a{
+  color:#fff;
+}
+ul li:nth-child(1):hover a{
+  color:#3498db
+}
+ul li:nth-child(2):hover a{
+  color:#e74c3c
+}
+ul li:nth-child(3):hover a{
+  color:#3498db
+}
+ul li:nth-child(4):hover a{
+  color:#8e44ad
+}
+
+
+
+ .dropbtn-a{
+      cursor: pointer;
+	  position: relative;
+      display: inline-block;
+	 
+    }
+
+    
+
+    .dropup-content-f {
+      display: none;
+      position: absolute;
+      background-color: #0c0a0a;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropup-content-f a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropup-content-f a:hover 
+	{background-color: #020202;
+		text-align: justify;
+	}
+    
+
+    .dropbtn-a:hover .dropup-content-f{
+	  display: block;
+    }
+    
+
